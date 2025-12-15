@@ -1,0 +1,25 @@
+meta {
+  name: Add new Course
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:8000/courses
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": "111",
+    "course_name": "teste1",
+    "description": "isso é um curso teste",
+    "max_students": "10"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
