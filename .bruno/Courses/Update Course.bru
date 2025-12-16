@@ -1,0 +1,29 @@
+meta {
+  name: Update Course
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://127.0.0.1:8000/course/{{id_course}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": "222",
+    "course_name": "teste2222",
+    "description": "isso é um curso teste",
+    "max_students": "10"
+  }
+}
+
+vars:pre-request {
+  id_course: 2222
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

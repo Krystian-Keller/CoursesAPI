@@ -1,0 +1,20 @@
+meta {
+  name: Delete Course By ID
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://127.0.0.1:8000/course/{{id_course}}
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  id_course: 222
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
